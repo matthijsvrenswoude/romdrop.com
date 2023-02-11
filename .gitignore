@@ -3,3 +3,4 @@ actions-runner
 yarn.lock
 # Local Netlify folder
 .netlify
+romdrop.com/build
