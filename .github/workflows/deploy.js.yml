@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -39,7 +39,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           set -e
-          cd /path/to/your/app
+          cd /romdrop.com/
           rm -rf build
           curl -LO https://github.com/$GITHUB_REPOSITORY/releases/download/$GITHUB_SHA/build.zip
           unzip build.zip
