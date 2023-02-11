@@ -35,25 +35,15 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
-        port: ${{ secrets.SSH_PORT }}
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
         script: |
           set -e
-          cd /romdrop.com/
+          cd /path/to/your/app
           rm -rf build
-          tar -zxf build.tar.gz
-          rm build.tar.gz
+          curl -LO https://github.com/$GITHUB_REPOSITORY/releases/download/$GITHUB_SHA/build.zip
+          unzip build.zip
+          rm build.zip
       env:
-        SSH_KNOWN_HOSTS: ${{ secrets.SSH_HOST }}
-      
-    - name: Copy build to server
-      uses: appleboy/scp-action@main
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        source: build
-        target: /romdrop.com/
-        flags: -r
-      env:
-        SSH_KNOWN_HOSTS: ${{ secrets.SSH_HOST }}
+        SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+
