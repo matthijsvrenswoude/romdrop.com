@@ -36,7 +36,7 @@ jobs:
 
 
     - name: Deploy to server
-      uses: mdallasanta/ssh-scp-deploy@latest
+      uses: mdallasanta/ssh-scp-deploy@1.2.0
       with:
         local: './'
         remote: '~/'
