@@ -39,7 +39,7 @@ jobs:
       uses: mdallasanta/ssh-scp-deploy@master
       with:
         local: './'
-        remote: '~/
+        remote: '~/'
         host: ${{ secrets.SSH_HOST }}
         port: ${{ secrets.SSH_PORT }}
         user: ${{ secrets.SSH_USERNAME }}
