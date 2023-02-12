@@ -33,7 +33,7 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
-    - run "sed '1d' .gitignore > .gitignore"
+    - run echo "sed '1d' .gitignore > .gitignore"
     - name: Commit to Deploy Branch
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
