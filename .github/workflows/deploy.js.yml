@@ -34,20 +34,16 @@ jobs:
     - name: Build
       run: npm run build
 
+
     - name: Deploy to server
-      uses: appleboy/ssh-action@master
+      uses: mdallasanta/ssh-scp-deploy@master
       with:
+        local: './'
+        remote: '~/
         host: ${{ secrets.SSH_HOST }}
         port: ${{ secrets.SSH_PORT }}
-        username: ${{ secrets.SSH_USERNAME }}
+        user: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PW }}
-        script: |
-          set -e
-          cd /
-          cd /home/${{ secrets.SSH_USERNAME }}/domains/romdrop.com/
-          ls
-          curl -LO https://github.com/$GITHUB_REPOSITORY/releases/download/$GITHUB_SHA/build.zip
-          unzip build.zip
-      env:
-        SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        pre_upload: ls
+        post_upload: ls
 
