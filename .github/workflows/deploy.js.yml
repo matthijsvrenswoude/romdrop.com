@@ -39,7 +39,7 @@ jobs:
     - name: Deploy to server
       uses: marcodallasanta/ssh-scp-deploy@v1.2.0
       with:
-        local: './build/'
+        local: '/build/'
         remote: '/'
         host: ${{ secrets.SSH_HOST }}
         port: ${{ secrets.SSH_PORT }}
