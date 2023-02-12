@@ -28,7 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: 'romdrop.com/package-lock.json'
+        cache-dependency-path: 'romdrop.com/yarn.lock'
     - name: Install dependencies
       run: npm ci
     - name: Build

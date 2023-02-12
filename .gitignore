@@ -2,5 +2,6 @@
 # Local Netlify folder
 .netlify
 romdrop.com/build
+package-lock.json
 
 
