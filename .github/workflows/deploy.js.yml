@@ -40,6 +40,15 @@ jobs:
         add_timestamp: true
         commit_prefix: "[AUTO]"
         commit_message: "Automatic commit"
-        force: false
+        force: true
         target_branch: automatic-build
+    - name: "Create automatic release"
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GH_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: true
+        title: "Website deploy release"
+        files: |
+          LICENSE.txt
 
