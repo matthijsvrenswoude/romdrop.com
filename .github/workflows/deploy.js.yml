@@ -33,17 +33,13 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
-    - run: ls
-
-
-    - name: Deploy to server
-      uses: marcodallasanta/ssh-scp-deploy@v1.2.0
+    - name: Commit to Deploy Branch
+      uses: devops-infra/action-commit-push@v0.9.2
       with:
-        local: '/build/'
-        remote: '/'
-        host: ${{ secrets.SSH_HOST }}
-        port: ${{ secrets.SSH_PORT }}
-        user: ${{ secrets.SSH_USERNAME }}
-        password: ${{ secrets.SSH_PW }}
-        ssh_options: -o StrictHostKeyChecking=no
+        github_token: "${{ secrets.GH_TOKEN }}"
+        add_timestamp: true
+        commit_prefix: "[AUTO]"
+        commit_message: "Automatic commit"
+        force: false
+        target_branch: automatic-build
 
