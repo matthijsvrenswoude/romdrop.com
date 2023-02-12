@@ -42,9 +42,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PW }}
         script: |
-          set -e
-
-          rm -rf build
+          cd /domains/romdrop.com/
           curl -LO https://github.com/$GITHUB_REPOSITORY/releases/download/$GITHUB_SHA/build.zip
           unzip build.zip
           rm build.zip
