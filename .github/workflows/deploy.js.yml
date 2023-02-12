@@ -45,6 +45,7 @@ jobs:
           set -e
           cd /
           cd /home/${{ secrets.SSH_USERNAME }}/domains/romdrop.com/
+          ls
           curl -LO https://github.com/$GITHUB_REPOSITORY/releases/download/$GITHUB_SHA/build.zip
           unzip build.zip
       env:
