@@ -35,21 +35,21 @@ jobs:
       run: npm run build
     - name: Commit to Deploy Branch
       uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          # Optional. Commit message for the created commit.
-          # Defaults to "Apply automatic changes"
-          commit_message: Apply automatic changes
+      with:
+        # Optional. Commit message for the created commit.
+        # Defaults to "Apply automatic changes"
+        commit_message: Apply automatic changes
 
-          # Optional. Local and remote branch name where commit is going to be pushed
-          #  to. Defaults to the current branch.
-          #  You might need to set `create_branch: true` if the branch does not exist.
-          branch: automatic-build
+        # Optional. Local and remote branch name where commit is going to be pushed
+        #  to. Defaults to the current branch.
+        #  You might need to set `create_branch: true` if the branch does not exist.
+        branch: automatic-build
 
-          # Optional. Options used by `git-commit`.
-          # See https://git-scm.com/docs/git-commit#_options
-          commit_options: '--no-verify --signoff'
-      
-          # Optional. Options used by `git-push`.
-          # See https://git-scm.com/docs/git-push#_options
-          push_options: '--force'
+        # Optional. Options used by `git-commit`.
+        # See https://git-scm.com/docs/git-commit#_options
+        commit_options: '--no-verify --signoff'
+
+        # Optional. Options used by `git-push`.
+        # See https://git-scm.com/docs/git-push#_options
+        push_options: '--force'
 
