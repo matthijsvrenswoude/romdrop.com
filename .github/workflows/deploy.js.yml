@@ -43,7 +43,7 @@ jobs:
         force: true
         target_branch: automatic-build
     - name: "Create automatic release"
-    - uses: "marvinpinto/action-automatic-releases@latest"
+      uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GH_TOKEN }}"
         automatic_release_tag: "latest"
