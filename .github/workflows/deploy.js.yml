@@ -39,8 +39,8 @@ jobs:
       with:
         host: ${{ secrets.SSH_HOST }}
         port: ${{ secrets.SSH_PORT }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PW }}
         script: |
           set -e
           cd /romdrop.com/
