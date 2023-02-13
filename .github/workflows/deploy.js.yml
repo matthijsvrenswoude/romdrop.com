@@ -36,9 +36,7 @@ jobs:
     - name: Commit to Deploy Branch
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        # Optional. Commit message for the created commit.
-        # Defaults to "Apply automatic changes"
-        commit_message: [Automatic] Building website
+        commit_message: Automatic Building website
 
         # Optional. Options used by `git-commit`.
         # See https://git-scm.com/docs/git-commit#_options
