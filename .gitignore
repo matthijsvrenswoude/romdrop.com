@@ -1,6 +1,20 @@
-.idea
+/romdrop.com/build
+/romdrop.com/.docusaurus
+/romdrop.com/.cache-loader
+
+# Misc
+/romdrop.com/.DS_Store
+/romdrop.com/.env.local
+/romdrop.com/.env.development.local
+/romdrop.com/.env.test.local
+/romdrop.com/.env.production.local
+
+/romdrop.com/npm-debug.log*
+/romdrop.com/yarn-debug.log*
+/romdrop.com/yarn-error.log*
+
+
 # Local Netlify folder
 .netlify
-romdrop.com/build
 yarn.lock
 node_modules

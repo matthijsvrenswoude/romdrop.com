@@ -34,7 +34,14 @@ jobs:
     - name: Build
       run: npm run build
     - run: |
+        cd ..
+        echo "$(cat .gitignore)"
+    - run: |
+          cd ..
           sed '1d' .gitignore > .gitignore
+      - run: |
+          cd ..
+          echo "$(cat .gitignore)"
     - name: Commit to Deploy Branch
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
@@ -49,8 +56,6 @@ jobs:
 
         # Optional. Options used by `git-commit`.
         # See https://git-scm.com/docs/git-commit#_options
-        commit_options: '--no-verify --signoff'
-
         # Optional. Options used by `git-push`.
         # See https://git-scm.com/docs/git-push#_options
         push_options: '--force'
