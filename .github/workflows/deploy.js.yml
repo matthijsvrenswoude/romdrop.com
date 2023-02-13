@@ -34,14 +34,9 @@ jobs:
     - name: Build
       run: npm run build
     - run: |
-        cd ..
-        echo `cat .gitignore`
-    - run: |
           cd ..
           sed '1d' .gitignore > .gitignore
-    - run: |
-        cd ..
-        echo `cat .gitignore`
+    - run: echo `cat ./../.gitignore`
     - name: Commit to Deploy Branch
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
