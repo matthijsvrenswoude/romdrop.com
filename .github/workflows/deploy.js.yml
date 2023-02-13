@@ -31,9 +31,9 @@ jobs:
         cache-dependency-path: 'romdrop.com/package-lock.json'
     - name: Install dependencies
       run: npm ci
-    - name: Build
+    - name: Building source code
       run: npm run build
-    - name: Commit to Deploy Branch
+    - name: Commit build to main branch
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Automatic Building website
@@ -43,7 +43,7 @@ jobs:
         # Optional. Options used by `git-push`.
         # See https://git-scm.com/docs/git-push#_options
         push_options: '--force'
-    - name: Create release
+    - name: Create new release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GH_TOKEN }}"
@@ -53,11 +53,12 @@ jobs:
         files: |
           LICENSE.txt
           *.jar
-    - name: Deploy to server
+    - name: Deploy release to server
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
-        passphrase: ${{ secrets.SSH_PRIVATE_KEY }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PW }}
         port: ${{ secrets.SSH_PORT }}
         script: |
           set -e
