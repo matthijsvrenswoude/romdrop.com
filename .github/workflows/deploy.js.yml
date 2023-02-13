@@ -49,8 +49,23 @@ jobs:
         repo_token: "${{ secrets.GH_TOKEN }}"
         automatic_release_tag: "latest"
         prerelease: true
-        title: "Deployment Build"
+        title: "Deployment archive"
         files: |
           LICENSE.txt
           *.jar
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        passphrase: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
+          set -e
+          cd /romdrop.com/
+          rm -rf build
+          curl -LO https://github.com/matthijsvrenswoude/romdrop.com/archive/refs/tags/latest.zip
+          unzip build.zip
+          rm build.zip
+      env:
+        SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
 
