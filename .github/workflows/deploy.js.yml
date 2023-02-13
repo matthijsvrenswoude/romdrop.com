@@ -58,8 +58,8 @@ jobs:
         password: ${{ secrets.SSH_PW }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          set -e
           cd /romdrop.com/
+          set -e
           rm -rf build
           curl -LO https://github.com/matthijsvrenswoude/romdrop.com/archive/refs/tags/latest.zip
           unzip build.zip
