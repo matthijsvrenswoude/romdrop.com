@@ -50,9 +50,6 @@ jobs:
         automatic_release_tag: "latest"
         prerelease: true
         title: "Deployment archive"
-        files: |
-          LICENSE.txt
-          *.jar
     - name: Deploy release to server
       uses: appleboy/ssh-action@master
       with:
