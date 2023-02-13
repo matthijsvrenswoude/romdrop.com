@@ -43,14 +43,14 @@ jobs:
         # Optional. Options used by `git-push`.
         # See https://git-scm.com/docs/git-push#_options
         push_options: '--force'
-      - name: Create release
-        uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GH_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: "Deployment Build"
-          files: |
-            LICENSE.txt
-            *.jar
+    - name: Create release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GH_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: true
+        title: "Deployment Build"
+        files: |
+          LICENSE.txt
+          *.jar
 
