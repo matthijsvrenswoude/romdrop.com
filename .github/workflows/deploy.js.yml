@@ -5,9 +5,9 @@ name: Deploy to Webserver
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Deployed" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "Deployed" ]
 
 jobs:
   build:
