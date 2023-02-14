@@ -62,7 +62,7 @@ jobs:
           set -e
           rm -rf latest
           curl -LO https://github.com/matthijsvrenswoude/romdrop.com/archive/refs/tags/latest.zip
-          unzip latest.zip
+          unzip -o latest.zip
           rm latest.zip
       env:
         SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
