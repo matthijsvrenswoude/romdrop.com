@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: main
+  branch: Contribute
   repo: matthijsvrenswoude/romdrop.com
 
 # These lines should *not* be indented

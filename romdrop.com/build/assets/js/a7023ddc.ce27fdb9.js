@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkromdrop_com=self.webpackChunkromdrop_com||[]).push([[713],{3457:o=>{o.exports=JSON.parse('[{"label":"hola","permalink":"/blog/tags/hola","count":1},{"label":"docusaurus","permalink":"/blog/tags/docusaurus","count":1}]')}}]);
