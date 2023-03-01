@@ -52,20 +52,18 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Romdrop',
         logo: {
           alt: 'Romdrop Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -88,7 +86,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Community pages',
             items: [
               {
                 label: 'Miata.net',
