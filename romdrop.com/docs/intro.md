@@ -20,7 +20,7 @@ Before you start modifications to your existing car we suggest you browse one of
 
 The hardware requirements are the Tatrix Openport
 [Setup](setup.md)
-[Conversion Guides](/docs/conversion-guides.md)
+[Conversion Guides]
 
 
 ### Disclaimer
