@@ -2,46 +2,34 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Docs intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the Romdrop PCM Flash kit documentation! This page will guide you through the process of understanding and DIY modifying of your own MX5 NC ECU.
 
-## Getting Started
 
-Get started by **creating a new site**.
+## What can you expect?
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+In the Romdrop.com guides we will provide step by step guides on how to tune your MX5 NC to your desires.
+We will go in detail on the choosing the correct hardware, the applied physics and modifying the tables in your existing tune.
 
-### What you'll need
+During this guides we will not cover the installation of new hardware.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### Getting started
 
-## Generate a new site
+Before you start modifications to your existing car we suggest you browse one of our few guides:
 
-Generate a new Docusaurus site using the **classic template**.
+The hardware requirements are the Tatrix Openport
+[Setup](setup.md)
+[Conversion Guides](conversion-guides.md)
 
-The classic template will automatically be added to your project after you run the command:
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### Disclaimer
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Romdrop.com website and Flash software is build and maintained by the MX5 NC Community.
+While we try to have our documentation maintained as up to date as possible, this may not always be the case.
+ECU modifications are at your own risk.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Contribute
+If you like to add additional guides or knowledge to Romdrop.com
+Please visit https://romdrop.com/contribute/ or the https://github.com/matthijsvrenswoude/romdrop.com github.
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
